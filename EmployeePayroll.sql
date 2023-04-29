@@ -1,8 +1,12 @@
 
              /*!!!!! Welcome to EmployeePayrollProblem !!!!*/
+create table employee_payroll
+(
+ Id int primary key identity,
+ Name varchar(40) NOT NULL,
+ Salary int,
+ StartDate Date NOT NULL
+)
 
-create database payroll_service   /* CREATE DATABASE */
+select * from employee_payroll
 
-Select name from sys.databases;
-
-use payroll_service
