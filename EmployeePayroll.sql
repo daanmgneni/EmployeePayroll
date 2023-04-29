@@ -99,3 +99,8 @@ SET Phone_Number = 98864432,
 	 Income_Tax = 7,
 	 Net_Pay = 36000
 	  WHERE id = 4
+
+Insert into employee_payroll (Name,department, StartDate) /* INSERT NEW VALUE FOR UC 10 */
+values('Durga','Marketing','2023-01-11')  /* create redundency */
+
+select * from employee_payroll where name = 'Durga' /* create redundency same person but differnet id shows */
