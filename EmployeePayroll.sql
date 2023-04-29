@@ -1,4 +1,4 @@
-             /*!!!!! Welcome to EmployeePayrollProblem !!!!*/
+     /*!!!!! Welcome to EmployeePayrollProblem !!!!*/
 create table employee_payroll  /* create table */
 (
  Id int primary key identity,
@@ -21,3 +21,25 @@ select Salary from employee_payroll where id = 3   /* salary of particular emplo
 
 select * from employee_payroll where StartDate BETWEEN CAST('2013-03-01' AS DATE) AND GETDATE() /* employee deatil b/w date range */
 
+alter table employee_payroll
+add Gender char(1)
+update employee_payroll set Gender= 'M' where name ='Ram' or name = 'Shyam' or name = 'Bhole'
+update employee_payroll set Gender= 'F' where name ='Durga'
+
+select SUM(Salary) from employee_payroll
+where Gender = 'M' group by Gender;
+
+select AVG(Salary) from employee_payroll
+where Gender = 'M' group by Gender;
+
+select MIN(Salary) from employee_payroll
+where Gender = 'M' group by Gender;
+
+select MAX(Salary) from employee_payroll
+where Gender = 'M' group by Gender;
+
+select COUNT(*) from employee_payroll
+where Gender = 'M' group by Gender;
+
+select COUNT(*) from employee_payroll
+where Gender = 'F' group by Gender;
